@@ -1,16 +1,228 @@
-*{
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&display=swap');
+
+/* RESET */
+* {
     text-align: center;
+    margin: 0;
     padding: 0;
-    text-decoration: none;
-    color: white;
+    box-sizing: border-box;
+    font-family: 'Cinzel', serif;
 }
 
-footer{
+/* BODY */
+body {
+    background: linear-gradient(145deg, #1a1d24, #2d3142);
+    color: #f8f8f8;
+    padding-bottom: 5rem;
+    scroll-behavior: smooth;
+    background-image: url('https://www.transparenttextures.com/patterns/dark-denim-3.png');
+}
+
+/* HEADER */
+header {
+    text-align: center;
+    padding: 2.5rem 1rem;
+    background: radial-gradient(circle, #2d3142, #1a1d24);
+    color: #e0d8c3;
+    border-bottom: 3px solid #b49b66;
+    box-shadow: 0 0 20px #8b6f3d;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 3px #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+}
+
+h1::before {
+    content: '🛡️';
+    animation: pulseIcon 2s infinite;
+}
+
+h2 {
+    color: #d4af37;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px dashed #b49b66;
+    padding-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+h2::before {
+    content: '⚔️';
+}
+
+/* CONTAINER */
+.forms-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem 5%;
+}
+
+/* FORMULÁRIOS */
+form {
+    background: rgba(29, 31, 41, 0.85);
+    padding: 2rem;
+    border-radius: 12px;
+    border: 3px solid transparent;
+    box-shadow: 0 0 10px #8b6f3d;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    position: relative;
+    animation: borderGlow 4s infinite linear;
+}
+
+label {
+    font-weight: bold;
+    color: #c0b283;
+    font-size: 1.1rem;
+}
+
+input,
+textarea,
+select {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #b49b66;
+    font-size: 1rem;
+    background-color: #2c2f3a;
+    color: #f8f8f8;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    border-color: #d4af37;
+    box-shadow: 0 0 8px #d4af37;
+    background-color: #1c1e26;
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* BOTÕES */
+button {
+    background: linear-gradient(145deg, #b49b66, #8b6f3d);
+    color: #1a1d24;
+    font-weight: bold;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    align-self: flex-start;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+button:hover {
+    background: #d4af37;
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 0 10px #d4af37;
+}
+
+#confirmarBtn {
+    background-color: #7b1fa2;
+    color: #fff;
+    font-weight: bold;
+    padding: 14px 20px;
+    font-size: 1.1rem;
+    margin-top: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 0 8px #ab47bc;
+}
+
+#confirmarBtn:hover {
+    background-color: #9c27b0;
+    transform: scale(1.03);
+}
+
+/* FOOTER */
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: #1a1d24;
+    color: #d4af37;
+    text-align: center;
+    padding: 1rem;
+    border-top: 2px solid #b49b66;
+    box-shadow: 0 -2px 8px #8b6f3d;
     display: flex;
     justify-content: center;
-    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
 }
 
-footer img{
-    width: 5%;
+footer img {
+    width: 24px;
+    height: 24px;
+    filter: brightness(0) invert(1);
+}
+
+footer span {
+    font-weight: bold;
+}
+
+/* ANIMAÇÕES */
+@keyframes borderGlow {
+    0% {
+        border-color: #b49b66;
+        box-shadow: 0 0 10px #b49b66;
+    }
+
+    50% {
+        border-color: #d4af37;
+        box-shadow: 0 0 20px #d4af37;
+    }
+
+    100% {
+        border-color: #b49b66;
+        box-shadow: 0 0 10px #b49b66;
+    }
+}
+
+@keyframes pulseIcon {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.15);
+    }
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+    .forms-container {
+        padding: 1rem;
+    }
+
+    form {
+        padding: 1.5rem;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
 }
