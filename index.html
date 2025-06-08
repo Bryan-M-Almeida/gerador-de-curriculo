@@ -11,31 +11,42 @@
 
 <body>
     <header>
+        <div>
+            <img src="https://cdn-icons-png.flaticon.com/512/3524/3524636.png" alt="" class="icone">
+        </div>
         <h1>Gere seu Currículo</h1>
     </header>
+    <nav id="sidebar">
+        <h2>Currículos Salvos</h2>
+        <ul>
+            <li><a href="#">Currículo 01</a></li>
+            <li><a href="#">Currículo 02</a></li>
+            <li><a href="#">Currículo 03</a></li>
+        </ul>
+    </nav>
 
-    <main>
+    <main id="curriculoContent">
         <form id="curriculoForm" class="curriculo-form">
             <div class="forms-container">
 
                 <!-- 1. Informações Básicas -->
                 <h2>Informações Básicas</h2>
                 <label>Nome:</label>
-                <input type="text" required placeholder="ex: Bryan Maciel de Almeida"/>
+                <input type="text" name="nome" required placeholder="ex: Bryan Maciel de Almeida" />
 
                 <label>Idade:</label>
-                <input type="number" required placeholder="ex: 19 anos"/>
+                <input type="number" name="idade" required placeholder="ex: 19 anos" />
 
                 <label>Email:</label>
-                <input type="email" required placeholder="seuemail@gmail.com"/>
+                <input type="email" name="email" required placeholder="seuemail@gmail.com" />
 
                 <label>Celular:</label>
-                <input type="text" placeholder="Ex: (+55) 11 91234-5678" required />
+                <input type="text" name="celular" placeholder="Ex: (+55) 11 91234-5678" required />
 
                 <!-- 2. Objetivo Profissional -->
                 <h2>Objetivo Profissional</h2>
                 <label>Objetivo:</label>
-                <textarea rows="4" placeholder="Descreva seu objetivo..." required></textarea>
+                <textarea name="objetivo" rows="4" placeholder="Descreva seu objetivo..." required></textarea>
 
                 <!-- 3. Formação Acadêmica -->
                 <h2>Formação Acadêmica</h2>
@@ -65,8 +76,9 @@
                         <br><br>
                         <label>Período:</label>
                         <input type="text" placeholder="Jan/2022 - Dez/2023" />
-                        <br><br>
+                        <br><br><br>
                         <label>Atividades:</label>
+                        <br><br>
                         <textarea rows="3"></textarea>
                     </div>
                 </div>
@@ -75,7 +87,7 @@
                 <!-- 5. Habilidades -->
                 <h2>Habilidades Técnicas</h2>
                 <label>Liste suas habilidades:</label>
-                <textarea rows="4" placeholder="Ex: HTML, CSS, JS, React..."></textarea>
+                <input type="text" name="habilidades" placeholder="Ex: HTML, CSS, JS, React..." />
 
                 <!-- 6. Idiomas -->
                 <h2>Idiomas</h2>
@@ -98,15 +110,17 @@
                 <!-- 7. Links -->
                 <h2>Links</h2>
                 <label>LinkedIn:</label>
-                <input type="url" placeholder="https://linkedin.com/in/seu-perfil" required />
+                <input type="url" name="linkedin" placeholder="https://linkedin.com/in/seu-perfil" />
                 <label>GitHub:</label>
-                <input type="url" placeholder="https://github.com/seuuser" />
+                <input type="url" name="github" placeholder="https://github.com/seuuser" />
                 <label>Portfólio:</label>
-                <input type="url" placeholder="https://meusite.com" />
+                <input type="url" name="portfolio" placeholder="https://meusite.com" />
 
                 <!-- Botão Final -->
                 <div style="margin-top: 2rem;">
                     <button type="submit" id="confirmarBtn">✅ Confirmar Dados</button>
+                    <br>
+                    <button type="button" id="gerarPdfBtn">📄 Gerar Currículo em PDF</button>
                 </div>
             </div>
         </form>
@@ -118,7 +132,7 @@
             <span>Bryan</span>
         </a>
     </footer>
-
+    <script src="script/animacoes.js"></script>
     <script src="script/script.js"></script>
 </body>
 
