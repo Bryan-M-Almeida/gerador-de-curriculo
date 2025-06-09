@@ -1,11 +1,63 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Currículo</title>
+    <link rel="stylesheet" href="style/curriculo.css">
 </head>
+
 <body>
-    
+    <div id="curriculo">
+        <header>
+            <h1 id="nome"></h1>
+            <p id="idade"></p>
+            <p id="email"></p>
+            <p id="celular"></p>
+        </header>
+
+        <br><br>
+
+        <section>
+            <h2>Objetivo Profissional</h2>
+            <p id="objetivo"></p>
+        </section>
+
+        <br><br>
+        <section>
+            <h2>Formação Acadêmica</h2>
+            <div id="formacoes"></div>
+        </section>
+        <br><br>
+        <section>
+            <h2>Experiência Profissional</h2>
+            <div id="experiencias"></div>
+        </section>
+        <br>
+        <section>
+            <h2>Habilidades Técnicas</h2>
+            <p id="habilidades"></p>
+        </section>
+        <br><br>
+        <section>
+            <h2>Idiomas</h2>
+            <div id="idiomas"></div>
+        </section>
+        <br><br>
+        <section>
+            <h2>Links</h2>
+            <p><a id="linkedin" target="_blank">LinkedIn</a></p>
+            <p><a id="github" target="_blank">GitHub</a></p>
+            <p><a id="portfolio" target="_blank">Portfólio</a></p>
+        </section>
+    </div>
+
+    <button id="gerarPdf" class="no-print">📄 Baixar PDF</button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="script/dados.js"></script>
 </body>
+
 </html>

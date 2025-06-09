@@ -56,4 +56,9 @@ document.getElementById("curriculoForm").addEventListener("submit", function (e)
 
     console.log("Currículo gerado:", data);
     alert("Dados confirmados! Veja no console (F12)");
+
+    localStorage.setItem("curriculoCompleto", JSON.stringify(data));
+    window.location.href = "curriculo.html"; // redireciona pra página do currículo
+
 });
+

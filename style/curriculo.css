@@ -1,0 +1,84 @@
+@page {
+    size: A4 portrait;
+    margin: 5mm;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: black;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#curriculo {
+    width: auto;
+    height: auto;
+    margin: 0;
+    padding: 5mm;
+    background: #fff;
+    font-family: Arial, sans-serif;
+    font-size: 6pt;
+    line-height: 1.3;
+    color: #000;
+}
+
+header {
+    margin-bottom: 4pt;
+}
+
+#nome {
+    font-size: 8pt;
+    font-weight: bold;
+    margin-bottom: 4pt;
+}
+
+#idade,
+#email,
+#celular {
+    font-size: 6pt;
+    margin-bottom: 2pt;
+}
+
+section {
+    break-inside: avoid;
+    margin-bottom: 4pt;
+}
+
+section h2 {
+    font-size: 9pt;
+    font-weight: bold;
+    margin-top: 4pt;
+    margin-bottom: 2pt;
+}
+
+section p,
+#objetivo,
+#habilidades,
+a {
+    font-size: 6pt;
+    margin-bottom: 2pt;
+    word-break: break-word;
+}
+
+a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+@media print {
+    .no-print {
+        display: none;
+    }
+}
